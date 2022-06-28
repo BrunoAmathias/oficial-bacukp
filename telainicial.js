@@ -68,5 +68,5 @@ function fecharMenu(){
 
 $("#reservas").click(()=>{
     console.log("funcionando");
-    $("#div-abertura").toggle()
+    $("#div-abertura").toggle(300)
 })

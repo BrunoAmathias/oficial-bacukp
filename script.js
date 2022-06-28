@@ -59,3 +59,14 @@ window.sr = ScrollReveal({reset:true});
         document.getElementById("content").style.visibility = "visible"
 
     }
+
+
+    function fecharMenu(){
+        let menuAbertura = document.getElementById("div-abertura")
+        menuAbertura.style.display = "none"
+    }
+    
+    $("#reservas").click(()=>{
+        console.log("funcionando");
+        $("#div-abertura").toggle(300)
+    })
