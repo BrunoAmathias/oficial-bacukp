@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ /* header ----------------------------------------- */
+
+
+
+.image-background-about{
+    background-image: url(assets/bar.jpeg);
+    width: 100%;
+    height: 75vh;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+
+.escrita-background-about{
+    margin: auto; 
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 80px;
+    font-family: 'Roboto', sans-serif;;
+  
+}
+
+.escrita-background-about h1{
+    font-size: 60px;
+}
+.escrita-background-about p{
+    font-size: 25px;
+    text-align: center;
+    
+}
+
+.escuro-about{
+    background: black;
+    width: 100%;
+    height: 75vh;
+}
+
+
+/* Final header --------------------------------------------------------- */
+
+/* começo main ---------------------------------------------------------- */
+
+.main-about{
+    background-color:rgb(36, 34, 35) ;
+    width: 100%;
+    padding-bottom: 12vh;
+    
+}
+.container-primario{
+    display: flex;
+    padding-left: 6vw;
+    padding-top: 10vh;
+   
+
+}
+
+
+
+.imagem{
+    width: 700px;
+    height: 700px;
+}
+.container-escrita{
+    margin: auto;
+   max-width: 45%;
+   line-height: 50px;
+   font-family: 'Roboto', sans-serif;
+}
+
+.container-escrita h1 {
+    color: rgb(214,161,67);
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 20px;
+
+}
+
+.container-escrita p {
+    color: white;
+    text-align: left;
+    font-size: 20px;
+    
+}
+
+.container-secundario{
+    display: flex;
+    padding-right: 8vw;
+    padding-top: 15vh;
+}
+/* final main ------------------------------------------ */
+
+@media (max-width: 1400px){
+    .imagem{
+        width: 600px;
+        height: 600px;
+    }
+
+}
+@media (max-width: 1250px){
+
+    .imagem{
+        width: 500px;
+        height: 600px;
+    }
+    .container-escrita p{
+        font-size:18px ;
+    }
+
+}
+
+@media (max-width: 1100px){
+        .container-primario{
+            flex-direction: column-reverse;
+            text-align: center;
+            padding-left: 0px;
+        }
+        .container-escrita {
+            max-width: 80%;
+            padding-bottom: 40px;
+        }
+
+        .container-secundario{
+            flex-direction: column;
+            text-align: center;
+            padding-right: 0px;
+        }
+   
+}
+@media (max-width: 600px){
+        .imagem{
+            width: 400px;
+            height: 500px;
+        }
+}
+
+@media (max-width: 420px){
+    .imagem{
+        width: 300px;
+        height: 400px;
+    }
+    .escrita-background-about h1 {
+        font-size: 35px;
+    }
+    .escrita-background-about p {
+        font-size: 18px;
+    }
+    .container-escrita p{
+        font-size: 17px;
+    }
+}
