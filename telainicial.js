@@ -39,12 +39,12 @@ function fechar(){
 
     }
 
-var close = document.getElementById('close');
-var popup = document.getElementById('popup');
+// var close = document.getElementById('close');
+// var popup = document.getElementById('popup');
 
-close.addEventListener("click", function() {
-  popup.style.display = 'none';
-});
+// close.addEventListener("click", function() {
+//   popup.style.display = 'none';
+// });
 
 
 
