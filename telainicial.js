@@ -39,12 +39,12 @@ function fechar(){
 
     }
 
-// var close = document.getElementById('close');
-// var popup = document.getElementById('popup');
+var close = document.getElementById('close');
+var popup = document.getElementById('popup');
 
-// close.addEventListener("click", function() {
-//   popup.style.display = 'none';
-// });
+close.addEventListener("click", function() {
+  popup.style.display = 'none';
+});
 
 
 
@@ -52,21 +52,41 @@ function fechar(){
 
 
 function fecharMenu(){
-    let menuAbertura = document.getElementById("div-abertura")
-    menuAbertura.style.display = "none"
+    let menuNav = document.getElementById("div-abertura")
+    menuNav.classList.remove("show-div-abertura")
 }
 
 
-// function abrirFecharMenuCel(){
-// let menuAbertura = document.getElementById("div-abertura")
-// if(menuAbertura.style.display === "none"){
-//     menuAbertura.style.display = "block"
-// }else {
-//       menuAbertura.style.display = "none"  
-// }
-// }
 
-$("#reservas").click(()=>{
-    console.log("funcionando");
-    $("#div-abertura").toggle(300)
-})
+
+
+function menuNavegador(){
+    let menuNav = document.getElementById("div-abertura")
+    if(menuNav.classList.contains("show-div-abertura"))
+        menuNav.classList.remove("show-div-abertura")
+        else{
+            menuNav.classList.add("show-div-abertura")
+        }
+}
+
+
+function menuMobileSub(){
+let menuSub = document.getElementById("div-abertura-mobile")
+if(menuSub.classList.contains("show-div-abertura-mobile"))
+    menuSub.classList.remove("show-div-abertura-mobile")
+    else{
+        menuSub.classList.add("show-div-abertura-mobile")
+    }
+}
+
+
+
+
+function mobileMenu(){
+let mobileMenu = document.getElementById("menu-mobile")
+if(mobileMenu.classList.contains("show-menu")){
+    mobileMenu.classList.remove("show-menu")
+    }else{
+        mobileMenu.classList.add("show-menu")
+    }
+}

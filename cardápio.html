@@ -28,30 +28,40 @@
 
     <header onmouseleave="fecharMenu()" id="header" class="header">
         <nav class="container-nav">
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <i class="fas fa-bars"></i>
-            </label>
-            <img class="logo" src="assets/logo2.png" alt="logo"> 
+            <img class="logo" src="assets/logo2.png" alt="logo">
             <ul class="ul">
                 <li><a class="active menu" href="index.html">Home</a></li>
                 <li><a class="menu" href="cardápio.html">Cardápio</a></li>
                 <li><a class="menu" href="index.html#footer">Contato</a></li>
-                <li><a class="menu button-ifood" href="https://www.ifood.com.br/delivery/sao-jose-do-rio-preto-sp/oficial-chopp--espeto-jk-jardim-panorama/0b49c1ef-5b64-4154-86ba-20d2053a1e8a" target="_blank" >Ifood</a></li>
+                <li><a class="menu button-ifood" href="https://www.ifood.com.br/delivery/sao-jose-do-rio-preto-sp/oficial-chopp--espeto-jk-jardim-panorama/0b49c1ef-5b64-4154-86ba-20d2053a1e8a" target="_blank">Ifood</a></li>
                 <ul id="list-reservas" class="list-reservas">
                     <li>
-                        <li><a   id="reservas" class="menu">Reservas</a></li></li>
+                        <li><a onclick="menuNavegador()"   id="reservas" class="menu">Reservas</a></li></li>
                         <div  onmouseleave="fecharMenu()" id="div-abertura" class="div-abertura">  
-                        <li><a class="menu-abertura responsivo-pc" href="https://web.whatsapp.com/send?phone=55173364-9891" target="_blank">Oficial JK</a></li>
-                        <li><a class="menu-abertura responsivo-pc" href="https://web.whatsapp.com/send?phone=551733639899" target="_blank">Oficial Andaló</a></li>
-                        <li><a class="menu-abertura responsivo-celular" href="https://api.whatsapp.com/send?phone=55173364-9891" target="_blank">Oficial JK</a></li>
-                        <li><a class="menu-abertura responsivo-celular" href="https://api.whatsapp.com/send?phone=55173363-9899" target="_blank">Oficial Andaló</a></li>
+                            <li><a class="menu-abertura responsivo-pc" href="https://web.whatsapp.com/send?phone=55173364-9891" target="_blank">Oficial JK</a></li>
+                            <li><a class="menu-abertura responsivo-pc" href="https://web.whatsapp.com/send?phone=551733639899" target="_blank">Oficial Andaló</a></li>
                         </div> 
             </ul>
             </ul>
+            <i onclick="mobileMenu()" class="fas fa-bars"></i>
+            <div class="div-mobile-menu">
+            <ul id="menu-mobile" class="menu-mobile">
+                <li><a class="active menu" href="index.html">Home</a></li>
+                <li><a class="menu" href="cardápio.html">Cardápio</a></li>
+                <li><a class="menu" href="index.html#footer">Contato</a></li>
+                <li><a class="menu button-ifood" href="https://www.ifood.com.br/delivery/sao-jose-do-rio-preto-sp/oficial-chopp--espeto-jk-jardim-panorama/0b49c1ef-5b64-4154-86ba-20d2053a1e8a" target="_blank">Ifood</a></li>
+                <ul id="list-reservas" class="list-reservas">
+                    <li>
+                        <li><a onclick="menuMobileSub()"  id="reservas" class="menu">Reservas</a></li></li>
+                        <div  onmouseleave="fecharMenu()" id="div-abertura-mobile" class="div-abertura-mobile">  
+                        <li><a class="menu-abertura-mobile responsivo-celular" href="https://api.whatsapp.com/send?phone=55173364-9891" target="_blank">Oficial JK</a></li>
+                        <li><a class="menu-abertura-mobile responsivo-celular" href="https://api.whatsapp.com/send?phone=55173363-9899" target="_blank">Oficial Andaló</a></li>
+                        </div> 
             </ul>
+            </ul>
+            </div>
         </nav>
-        </header>
+        </header >
     </header>
     <div class="escuro-cardapio">
 <section class="image-background-cardapio">

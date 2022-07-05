@@ -6,8 +6,9 @@
      margin: 0;
      text-decoration: none;
      box-sizing: border-box;
+
  }
- 
+
  body {
 font-family: montserrat;
  }
@@ -112,18 +113,6 @@ font-family: montserrat;
 }
 
 
-.checkbtn {
-	font-size: 30px;
-	color: white;
-	float: right;
-	line-height: 80px;
-	margin-right: 40px;
-	cursor: pointer;
-	display: none;
-}
-#check {
-	display: none;
-}
 
 
     
@@ -159,13 +148,15 @@ font-family: montserrat;
        border-radius: 10px;
 
   }
+  
   .container-abertura-menu{
     display: flex;
     color: blue;
   }
   .div-abertura{
+    height: 0;
     position: absolute;
-    display: none;
+    display: block;
     background-color: rgb(30, 30, 30);  
     margin-left: 18px;
     border-radius: 4px;
@@ -173,17 +164,51 @@ font-family: montserrat;
     padding-right: 15px;
     border: black 1px solid;
     z-index: 2;
+    opacity: 0;
+    transition: 0.5s;
+    font-size: 10px;
+  }
 
+  .show-div-abertura{
+    opacity: 1;
+    height: 12vh;
+    font-size: 1.4rem;  
   }
 
   .menu-abertura {
-    display: none;
+    display: block;
     color: white;
-    font-size: 1.4rem;  
     margin-left: 14px;
     list-style: none;
     line-height: 45px;
 }
+
+.div-abertura-mobile{
+left: -100%;
+position: absolute;
+width: 100%;
+background-color: rgb(5, 5, 5);  
+border: black 1px solid;
+opacity: 1;
+transition: 0.5s;
+font-size: 16px;
+}
+
+.show-div-abertura-mobile{
+left: 0;    
+}
+
+
+.menu-abertura-mobile {
+    display: block;
+    color: white;
+    list-style: none;
+    
+}
+
+
+
+
 .list-reservas{
     list-style: none;
     display: inline;
@@ -198,6 +223,43 @@ font-family: montserrat;
 
 #reservas{
     cursor: pointer;
+}
+i{ position: absolute;
+    color:white;
+    font-size: 30px;
+    visibility: hidden;
+    top: 6vh;
+    right: 7vw;
+    cursor: pointer;
+ } 
+ .div-mobile-menu{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    display: none;
+ }
+
+ .menu-mobile{
+   
+    position: absolute;
+    top: 15vh;
+    list-style: none;
+    background-color: black;
+    width: 100%;
+    height: 0vh;
+    text-align: center;
+    line-height: 80px;
+    transition: .5s;
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+
+} 
+
+ .show-menu{
+position: absolute;
+opacity: 1;
+height: 85vh;
 }
 /* Final header index -------------------------------------------------------------------------------------------- */
 
@@ -281,85 +343,12 @@ font-family: montserrat;
     color: rgb(214,161,67);
 }
 
-/* .conteudo-principal{
-    
-    display: flex;
-    padding-top: 10vh;
-    padding-left: 11vw;
-    
-}
-.imagem-principal{
-    width: 400px;
-    height: 30vh ;
-    margin-bottom: 2vh;
-    border-radius: 5px;
-    
-}
-
-
-.container-principal{
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    margin-right: 2vh;
-    margin-top: 7vh;
-    padding-bottom: 10vh;
-}
-.imagem-secundária{
-    width: 400px;
-    height: 30vh;
-    margin-bottom: 2vh;
-    border-radius: 5px;
-}
-
-.container-sucundário{
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-}
-.apresentação{
-    padding-left: 5vw;
-    width: 30vw;
-    margin-right: 1.5vw;
-    font-family: 'Gill Sans', 'Gill Sans MT',
-     Calibri,
-     'Trebuchet MS', sans-serif;
-
-
-}
-.titulo-apresentação{
-    color: rgb(222, 150, 37);
-
-}
-.apresentação p{
-    color: white;
-    font-size: 16px;
-    text-align: justify;
-    line-height: 34px;
-    padding-top: 5vh;
-    padding-bottom:5vh ;
-}
-
-.apresentação h3{
-    color: white;
-    font-size: 25px ;
-}
-
-.link-about{
-    text-decoration: none;
-    transition:0.2s ;
-}
-
-.link-about:hover{
-    color: rgb(222, 150, 37);
-} */ 
 
 /* Final Main index -------------------------------------------------------------------------------------------- */
 
 /* Começo footer -------------------------------------------------------------------------------------------- */
 .footer{
     background-color: rgb(20, 20, 20 );
-    width: 100%;
     color: white;
     font-family: 'Roboto', sans-serif;
 }
@@ -619,55 +608,26 @@ visibility: hidden;
 }
 @media (max-width: 858px){
 
+    .ul{
+        display: none;
+    }
+    .menu-mobile{
+        z-index: 3;
+    }
+    .div-mobile-menu{
+        display: block;
+     }
+    i{
+        visibility: visible;
+    }
+    
     .escrita-background p {
         width: 80vw;
     }
-
-    .checkbtn {
-        display: block;
-        z-index: 3;
-        
-    }
-    .ul{ display: flex;
-        flex-direction: column;
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: rgb(10, 10, 10);
-        left: -100%;
-        top: 0vh;
-        text-align: center;
-        transition: all .5s;
-        z-index: 2;
-        padding-top: 5vh;
-        
-    }
-    
-
-    .container-nav{
-        display: flex;
-        flex-direction: row-reverse; 
-    }
-    nav ul li{
-        display: block;
-        margin: 50px 0;
-        line-height: 10px;
-    }
-    .menu {
-        font-size: 25px;
-    }
-    
-    #check:checked ~ .checkbtn{
-        position: fixed;
-        top: 2.9vh;
-        right: 8.2vw;
-    }
-    
-    #check:checked ~ .ul {
-        left: 0;
-    }
-    
-    
+    .logo{
+        position: absolute;
+        left: 10vw;
+        }
     .button-ifood{
     
         
@@ -841,6 +801,14 @@ visibility: hidden;
        
         
         
+}
+@media (max-height:500px){
+    .container-endereco{
+        margin-top: 20vw;
+    }
+    .logo{
+        width: 120px;
+    }
 }
 
 @media (max-width:550px){
