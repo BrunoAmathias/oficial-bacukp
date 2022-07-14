@@ -239,7 +239,7 @@ i{ position: absolute;
     display: none;
  }
 
- .menu-mobile{
+.menu-mobile{
    
     position: absolute;
     top: 15vh;
@@ -249,7 +249,8 @@ i{ position: absolute;
     height: 0vh;
     text-align: center;
     line-height: 80px;
-    transition: .5s;
+    transition: 0.3s ;
+    visibility: hidden;
     opacity: 0;
     padding: 0;
     margin: 0;
@@ -257,8 +258,9 @@ i{ position: absolute;
 } 
 
  .show-menu{
-position: absolute;
 opacity: 1;
+position: absolute;
+visibility: visible;
 height: 85vh;
 }
 /* Final header index -------------------------------------------------------------------------------------------- */
